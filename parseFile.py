@@ -17,6 +17,7 @@ def General(file_path):
 
     File.close()
     return general
+    
 
 #Editor
 def Editor(file_path):
