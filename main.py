@@ -17,8 +17,13 @@ cols = Colours(FilePath)
 ho = HitObjects(FilePath)
 
 output = dict(general, **editor, **md, **diff, **tp, **cols, **ho)
+artist = output['[Metadata]']['Artist']
+title = output['[Metadata]']['Title']
+diffName = '[' + output['[Metadata]']['Version'] + ']'
 
+print(f"parsing {artist} - {title} {diffName}...")
 with open("parse_file.json", 'w') as outfile:
+    print("saving to a file...")
     dump(output, outfile)
 
 

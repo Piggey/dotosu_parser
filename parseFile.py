@@ -47,7 +47,7 @@ def Metadata(file_path):
     metadata = {}
     temp = {}
 
-    File = open("test.osu", "r", encoding="utf-8")
+    File = open(file_path, "r", encoding="utf-8")
     for line in File:
         if(line == "[Metadata]\n"):
             for tier2 in File:
